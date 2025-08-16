@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAQUX - Espace Compte</title>
+  <link rel="stylesheet" href="auth.css">
+  <style>
+    /* ======= ACCOUNT HERO ======= */
+    .account-hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(145deg, #0a0a0a, #121212);
+      box-shadow: inset 0 0 80px rgba(0, 255, 255, 0.05);
+    }
+
+    .account-hero h2 {
+      font-size: 36px;
+      color: #00ffff;
+      text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff55;
+      margin-bottom: 20px;
+    }
+
+    .account-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #00ffff;
+      box-shadow: 0 0 15px #00ffff55, 0 0 30px rgba(0,255,255,0.2);
+      object-fit: cover;
+    }
+
+    /* ======= ACCOUNT FORMS ======= */
+    .account-info {
+      max-width: 400px;
+      margin: 30px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .account-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: linear-gradient(135deg, #111, #1a1a1a);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00ffff33, 0 0 40px rgba(0,255,255,0.1);
+    }
+
+    .account-form label {
+      color: #aaa;
+      font-weight: 500;
+    }
+
+    /* Bouton déconnexion */
+    #logout-btn {
+      background: linear-gradient(45deg, #ff4d4d, #ff1a1a);
+      color: #fff;
+      padding: 14px 0;
+      border-radius: 10px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 15px #ff4d4d44, 0 0 30px rgba(255,77,77,0.2);
+      transition: all 0.3s ease;
+    }
+
+    #logout-btn:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 0 25px #ff4d4d88, 0 0 40px rgba(255,77,77,0.3);
+    }
+
+    @media (max-width: 500px) {
+      .account-hero h2 { font-size: 28px; }
+      .account-avatar { width: 100px; height: 100px; }
+    }
+    /* ======= HEADER ======= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #111;
+  border-bottom: 2px solid #1f1f1f;
+}
+
+header h1 {
+  margin: 0;
+  color: #00ffff;
+  letter-spacing: 2px;
+  font-size: 28px;
+}
+
+/* NAVIGATION BUTTONS */
+header nav a {
+  display: inline-block;
+  margin-left: 15px;
+  padding: 8px 18px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #00ffff, #00cccc);
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 10px #00ffff55, 0 0 20px rgba(0,255,255,0.2);
+  transition: all 0.3s ease;
+}
+
+header nav a:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 0 20px #00ffff88, 0 0 40px rgba(0,255,255,0.3);
+  color: #000;
+}
+
+/* ======= FOOTER ======= */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #111;
+  color: #555;
+  border-top: 1px solid #1a1a1a;
+  font-size: 14px;
+}
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>RAQUX</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+  </nav>
+</header>
+
+<section class="account-hero">
+  <h2>Bienvenue <span class="highlight">Pseudo</span></h2>
+  <img src="default-avatar.png" alt="Photo de profil" class="account-avatar">
+</section>
+
+<section class="account-info">
+  <form class="account-form">
+    <label for="username">Pseudo :</label>
+    <input type="text" id="username" class="auth-input" placeholder="Pseudo actuel">
+    <button type="submit" class="auth-button">Modifier le pseudo</button>
+  </form>
+
+  <form class="account-form">
+    <label for="avatar">Changer la photo de profil :</label>
+    <input type="file" id="avatar" class="auth-input">
+    <button type="submit" class="auth-button">Mettre à jour la PDP</button>
+  </form>
+
+  <button id="logout-btn">Déconnexion</button>
+</section>
+
+<footer>
+  <p>&copy; 2025 RAQUX. Tous droits réservés.</p>
+</footer>
+
+<script>
+  // Simuler modification pseudo
+  document.querySelectorAll('.account-form').forEach(form => {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Action simulée ! Ici le backend prendra le relais.');
+    });
+  });
+
+  // Simuler déconnexion
+  document.getElementById('logout-btn').addEventListener('click', () => {
+    alert('Déconnexion simulée !');
+  });
+</script>
+
+</body>
+</html>

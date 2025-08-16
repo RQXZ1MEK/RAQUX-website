@@ -1,0 +1,425 @@
+/* ======= GLOBAL ======= */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+}
+
+a {
+  color: #00ffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+a:hover {
+  color: #00cccc;
+  transform: scale(1.05);
+}
+
+/* ======= HEADER ======= */
+header {
+  background-color: #111;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #1f1f1f;
+}
+
+header h1 {
+  color: #00ffff;
+  letter-spacing: 2px;
+  font-size: 32px;
+  text-shadow: 0 0 5px #00ffff, 0 0 15px #00ffff;
+}
+
+nav a {
+  margin-left: 25px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* ======= HERO ======= */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background: linear-gradient(145deg, #0a0a0a, #121212);
+}
+
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #00ffff;
+  text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+  animation: slideIn 1s ease-out forwards;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #aaa;
+  animation: fadeIn 1.5s ease 0.5s forwards;
+}
+
+/* ======= BUTTON CTA ======= */
+.cta-button {
+  background-color: #00ffff;
+  color: #000;
+  font-weight: bold;
+  padding: 16px 36px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 0 12px #00ffff, 0 0 25px #00ffff;
+  transition: all 0.3s ease;
+  margin: 10px;
+  font-size: 16px;
+}
+
+.cta-button:hover {
+  background-color: #00cccc;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 20px #00cccc, 0 0 40px #00cccc;
+}
+
+/* ======= SECTIONS ======= */
+section {
+  padding: 100px 20px;
+  margin-top: 60px;
+  position: relative;
+}
+
+section::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 80px;
+  margin: 0 auto 40px auto;
+  background-color: #00ffff;
+  box-shadow: 0 0 15px #00ffff;
+  border-radius: 3px;
+}
+
+section h2 {
+  font-size: 32px;
+  color: #00ffff;
+  margin-bottom: 40px;
+  text-align: center;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+/* ======= NEWS ======= */
+.news {
+  background: linear-gradient(to bottom, rgba(0,255,255,0.05), rgba(0,255,255,0.02));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.news .card {
+  background-color: #121212;
+  border: 1px solid #00ffff;
+  border-radius: 12px;
+  padding: 40px;
+  flex: 1 1 280px;
+  max-width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 8px #00ffff, 0 0 20px rgba(0, 255, 255, 0.2);
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.news .card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 0 30px #00ffff, 0 0 60px rgba(0, 255, 255, 0.5);
+}
+
+.news .card h3 {
+  margin-bottom: 12px;
+  color: #00ffff;
+  font-size: 20px;
+}
+
+.news .card p {
+  color: #aaa;
+  font-size: 16px;
+}
+
+/* ======= TEAM ======= */
+.team {
+  background: linear-gradient(to bottom, rgba(0,255,255,0.03), rgba(0,255,255,0));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.team .card {
+  background-color: #111;
+  border: 1px solid #00ffff;
+  border-radius: 12px;
+  padding: 40px;
+  flex: 1 1 280px;
+  max-width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 8px #00ffff, 0 0 20px rgba(0, 255, 255, 0.2);
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.team .card:hover {
+  transform: translateY(-12px) scale(1.04);
+  box-shadow: 0 0 28px #00ffff, 0 0 55px rgba(0, 255, 255, 0.4);
+}
+
+.team .card h3 {
+  margin-bottom: 12px;
+  color: #00ffff;
+  font-size: 20px;
+}
+
+.team .card p {
+  color: #aaa;
+  font-size: 16px;
+}
+
+/* ======= STATS ======= */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+}
+
+.stats .card {
+  background-color: #111;
+  border: 1px solid #00ffff;
+  border-radius: 12px;
+  padding: 45px 25px;
+  flex: 1 1 200px;
+  max-width: 260px;
+  text-align: center;
+  box-shadow: 0 0 12px #00ffff, 0 0 25px rgba(0, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulseGlow 2s infinite;
+}
+
+.stats .card h3 {
+  font-size: 38px;
+  margin-bottom: 12px;
+  color: #00ffff;
+}
+
+.stats .card p {
+  font-size: 16px;
+  color: #aaa;
+}
+
+.stats .card:hover {
+  transform: translateY(-12px) scale(1.06);
+  box-shadow: 0 0 35px #00ffff, 0 0 65px rgba(0, 255, 255, 0.5);
+}
+
+/* ======= CONTAINER CTA AVEC FOND ======= */
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #00ffff55, #00cccc55); /* dégradé bleu transparent */
+  padding: 30px 40px;
+  border-radius: 16px; /* coins arrondis */
+  box-shadow: 0 0 20px #00ffff44, 0 0 40px rgba(0, 255, 255, 0.2); /* glow léger */
+  gap: 20px;
+  max-width: 500px;
+  margin: 40px auto;
+  transition: all 0.3s ease;
+}
+
+.cta-section:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 25px #00ffff88, 0 0 50px rgba(0,255,255,0.3);
+}
+
+
+/* ======= ANIMATIONS ======= */
+@keyframes slideIn {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 15px #00ffff, 0 0 30px rgba(0,255,255,0.2); }
+  50% { box-shadow: 0 0 30px #00ffff, 0 0 60px rgba(0,255,255,0.4); }
+  100% { box-shadow: 0 0 15px #00ffff, 0 0 30px rgba(0,255,255,0.2); }
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+  .news, .team, .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stats .card, .news .card, .team .card {
+    max-width: 90%;
+  }
+
+  .cta-section button.cta-button {
+    width: 80%;
+    margin: 10px 0;
+  }
+
+  section {
+    padding: 70px 15px;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  section h2 {
+    font-size: 28px;
+  }
+}
+/* ======= NAVIGATION BUTTONS ======= */
+header nav a {
+  display: inline-block;
+  margin-left: 20px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background-color: #111;
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px #00ffff33, 0 0 15px rgba(0,255,255,0.2);
+}
+
+header nav a:hover {
+  background-color: #111;
+  color: #00ffff;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 0 15px #00ffff, 0 0 30px rgba(0,255,255,0.3);
+}
+.highlight {
+  display: inline-block;          /* s’adapte à la largeur du texte */
+  padding: 6px 14px;              /* un peu d’espace autour du texte */
+  border-radius: 10px;            /* coins arrondis */
+  background: linear-gradient(135deg, #00ffff, #00cccc); /* joli dégradé bleu */
+  color: #000;                     /* texte lisible */
+  font-weight: bold;
+  box-shadow: 0 0 10px #00ffff55, 0 0 20px rgba(0,255,255,0.2); /* glow */
+  transition: all 0.3s ease;
+}
+
+.highlight:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 20px #00ffff88, 0 0 30px rgba(0,255,255,0.3);
+}
+/* ======= HEADER LOGGED ======= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #111;
+  border-bottom: 2px solid #1f1f1f;
+}
+
+header h1 {
+  margin: 0;
+  color: #00ffff;
+  letter-spacing: 2px;
+  font-size: 28px;
+}
+
+header nav a {
+  display: inline-block;
+  margin-left: 15px;
+  padding: 8px 18px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #00ffff, #00cccc);
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 10px #00ffff55, 0 0 20px rgba(0,255,255,0.2);
+  transition: all 0.3s ease;
+}
+
+header nav a:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 0 20px #00ffff88, 0 0 40px rgba(0,255,255,0.3);
+  color: #000;
+}
+
+/* ======= HERO CONNECTÉ ======= */
+.hero-logged {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero-logged h2 {
+  font-size: 32px;
+  color: #00ffff;
+  text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff55;
+  margin-bottom: 20px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.cta-buttons .cta-button {
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #00ffff, #00cccc);
+  color: #000;
+  text-decoration: none;
+  box-shadow: 0 0 15px #00ffff55, 0 0 30px rgba(0,255,255,0.2);
+  transition: all 0.3s ease;
+}
+
+.cta-buttons .cta-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 25px #00ffff88, 0 0 40px rgba(0,255,255,0.3);
+}
+/* Bouton déconnexion rouge RAQUX */
+.logout-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff4d4d, #ff1a1a);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 0 15px #ff4d4d55, 0 0 30px rgba(255,77,77,0.2);
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 25px #ff4d4d88, 0 0 40px rgba(255,77,77,0.3);
+}
+

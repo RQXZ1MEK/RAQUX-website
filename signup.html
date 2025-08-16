@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAQUX - S'inscrire</title>
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<header>
+  <h1>RAQUX</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="login.html">Connexion</a>
+  </nav>
+</header>
+
+<section class="hero-login">
+  <h2>Créer un compte</h2>
+  <p>Rejoins RAQUX et profite de tous nos services et challenges.</p>
+
+  <form class="auth-form">
+    <input type="text" class="auth-input" placeholder="Nom d'utilisateur" required>
+    <input type="email" class="auth-input" placeholder="Email" required>
+    <input type="password" class="auth-input" placeholder="Mot de passe" required>
+    <input type="password" class="auth-input" placeholder="Confirmer le mot de passe" required>
+    <button type="submit" class="auth-button">S'inscrire</button>
+    <a href="login.html" class="auth-link">Déjà un compte ? Connecte-toi</a>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 RAQUX. Tous droits réservés.</p>
+</footer>
+
+<script>
+document.querySelector('.auth-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  alert('Inscription simulée ! Ici tu mettras la logique backend.');
+});
+</script>
+
+</body>
+</html>
